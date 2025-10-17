@@ -53,9 +53,6 @@ function processNumbers(): string {
         Sum: ${sum}
     `;
 }
-
-// ==================== DEMO FUNCTIONS FOR HTML BUTTONS ====================
-
 // Global function declarations for HTML
 function demoGreet(): void {
     const output = document.getElementById('output');
