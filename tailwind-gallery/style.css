@@ -1,0 +1,106 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Card styles */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+    height: 192px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 12px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card-description {
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card-button {
+    width: 100%;
+    padding: 12px 16px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card-button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.card-button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card-button:hover i {
+    transform: translateX(4px);
+}
+
+/* Grid item height fix */
+.grid > * {
+    height: 100%;
+}
+
+/* Focus styles */
+.card-button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
